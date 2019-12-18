@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    
+    <body>
+        <div id="section-clothes-shop">
+            <h1 id="text-clothes-shop">Clothes Shop</h1>
+            <table>
+                <!-- Cloth item in the head -->
+                <tr>
+                    <td><img id="btn-next-head" class="btn-arrow btn-arrow-left" onclick="changeHeadLeft()" src="./images/arrow-left.png"/></td>
+                    <td><img id="item-head" class="img-item" src="images/head-0.png" /></td>
+                    <td><img id="btn-previous-head" class="btn-arrow btn-arrow-right" onclick="changeHeadRight()" src="./images/arrow-right.png"/></td>
+                </tr>
+                <!-- Cloth item in the body -->
+                <tr>
+                    <td><img id="btn-next-body" class="btn-arrow btn-arrow-left" onclick="changeBodyLeft()" src="./images/arrow-left.png"/></td>
+                    <td><img id="item-body" class="img-item" src="images/body-0.png" /></td>
+                    <td><img id="btn-previous-head" class="btn-arrow btn-arrow-right" onclick="changeBodyRight()" src="./images/arrow-right.png"/></td>
+                </tr>
+                <!-- Cloth item in the legs -->
+                <tr>
+                    <td><img id="btn-next-legs" class="btn-arrow btn-arrow-left" onclick="changeLegsLeft()" src="./images/arrow-left.png"/></td>
+                    <td><img id="item-legs" class="img-item" src="images/legs-0.png" /></td>
+                    <td><img id="btn-previous-legs" class="btn-arrow btn-arrow-right" onclick="changeLegsRight()" src="./images/arrow-right.png"/></td>
+                </tr>                
+            </table>
+            <button id="btn-randomize" onclick="randomizeAll()">Randomize</button>
+        </div>
+        
+        <script>
+        
+        // These are the max amount of items per section (don't change it! just use it).
+        const itemsCountHead = 4;
+        const itemsCountBody = 9;
+        const itemsCountLegs = 10;
+        
+        // These ones will hold the current item per section.
+        var currentItemHead = 0;
+        var currentItemBody = 0;
+        var currentItemLegs = 0;  
+		var headName = "head-" + currentItemHead + ".png";
+		var bodyName = "body-" + currentItemBody + ".png";
+		var legsName = "legs-" + currentItemBody + ".png";
+		
+		
+		
+
+        function changeHeadRight() {
+		       
+			   if (currentItemHead === 3) {
+			   currentItemHead = 0; 
+			   headName = "head-" + currentItemHead + ".png";
+			   console.log(headName);
+			   document.getElementById("item-head").src = "./images/" + headName;
+			   } else {
+			   currentItemHead += 1;
+			   headName = "head-" + currentItemHead + ".png";
+			   console.log(headName);
+			   
+			   
+			   document.getElementById("item-head").src = "./images/" + headName;
+			   }
+		}		
+		
+		function changeHeadLeft() {
+		       
+			   if (currentItemHead === 0) {
+			   currentItemHead = 3; 
+			   headName = "head-" + currentItemHead + ".png";
+			   console.log(headName);
+			   document.getElementById("item-head").src = "./images/" + headName;
+			   } else {
+			   currentItemHead -= 1;
+			   headName = "head-" + currentItemHead + ".png";
+			   console.log(headName);
+			   
+			   
+			   document.getElementById("item-head").src = "./images/" + headName;
+			   }
+		}		
+		
+		function changeBodyRight() {
+		       
+			   if (currentItemBody === 8) {
+			   currentItemBody = 0; 
+			   bodyName = "body-" + currentItemBody + ".png";
+			   console.log(bodyName);
+			   document.getElementById("item-body").src = "./images/" + bodyName;
+			   } else {
+			   currentItemBody += 1;
+			   bodyName = "body-" + currentItemBody + ".png";
+			   console.log(bodyName);
+			   
+			   
+			   document.getElementById("item-body").src = "./images/" + bodyName;
+			   }
+		}	
+		
+		function changeBodyLeft() {
+		       
+			   if (currentItemBody === 0) {
+			   currentItemBody = 8; 
+			   bodyName = "body-" + currentItemBody + ".png";
+			   console.log(bodyName);
+			   document.getElementById("item-body").src = "./images/" + bodyName;
+			   } else {
+			   currentItemBody -= 1;
+			   bodyName = "body-" + currentItemBody + ".png";
+			   console.log(bodyName);
+			   
+			   
+			   document.getElementById("item-body").src = "./images/" + bodyName;
+			   }
+		}	
+		
+		function changeLegsRight() {
+		       
+			   if (currentItemLegs === 9) {
+			   currentItemLegs = 0; 
+			   legsName = "legs-" + currentItemLegs + ".png";
+			   console.log(legsName);
+			   document.getElementById("item-legs").src = "./images/" + legsName;
+			   } else {
+			   currentItemLegs += 1;
+			   legsName = "legs-" + currentItemLegs + ".png";
+			   console.log(legsName);
+			   
+			   
+			   document.getElementById("item-legs").src = "./images/" + legsName;
+			   }
+		}	
+		
+		function changeLegsLeft() {
+		       
+			   if (currentItemLegs === 0) {
+			   currentItemLegs = 9; 
+			   legsName = "legs-" + currentItemLegs + ".png";
+			   console.log(legsName);
+			   document.getElementById("item-legs").src = "./images/" + legsName;
+			   } else {
+			   currentItemLegs -= 1;
+			   legsName = "legs-" + currentItemLegs + ".png";
+			   console.log(legsName);
+			   
+			   
+			   document.getElementById("item-legs").src = "./images/" + legsName;
+			   }
+		}	
+		
+		function randomizeAll() {
+		       currentItemLegs = Math.floor(Math.random() * 9);
+			   currentItemBody = Math.floor(Math.random() * 8);
+			   currentItemHead = Math.floor(Math.random() * 3);
+			   
+			   legsName = "legs-" + currentItemLegs + ".png";
+			   bodyName = "body-" + currentItemBody + ".png";
+			   headName = "head-" + currentItemHead + ".png";
+			   
+			   document.getElementById("item-legs").src = "./images/" + legsName;
+			   document.getElementById("item-body").src = "./images/" + bodyName;
+			   document.getElementById("item-head").src = "./images/" + headName;
+		}
+        // Define your functions to update cloth items per section.
+            
+        // Remember that document.getElementById("some-id").src = "./some-folder/some-file-name.png" can change the source image;
+            
+        // Remember that you can create a string appending two other ones.
+        // var index = 0;
+        // var filename = "something-" + index + ".png";
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+	font-family: 'Lato', sans-serif;
+}
+
+.btn-arrow {
+    width: 30%;
+}
+
+.btn-arrow-right {
+    float: left;
+}
+
+.btn-arrow-left {
+    float: right;
+}
+
+.img-item {
+    width: 60%;
+	margin: auto;
+	display: block;
+}
+
+#section-clothes-shop {
+    background-color: #85ffe0;
+	padding: 10px;
+	width: 80%;
+	margin-left: 10%;
+	border: 10px solid #ebba34;
+	text-align: center;
+	color: white;
+	height: 50%;
+	font-size: 40px;
+	border-radius: 20px;
+}
+
+#btn-randomize {
+    background: white;    
+    padding: 10px;
+	border-radius: 25px;
+	font-family: 'Lato', sans-serif;
+	height: 90px; 
+	background-color: #ebba34;
+	border: none;
+	color: white;
+	width: 200px; 
+	font-size: 30px;
+	margin-top: 10px;
+	font-weight: bold;
+}
