@@ -1,0 +1,61 @@
+h1, h2, p {
+		font-family: 'Josefin Sans', sans-serif;
+		text-align:center;
+		
+	  }
+	  
+.title {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:70;
+}
+
+.rtable img {
+	display: block;
+	margin: auto;
+	width: 70%;
+	height: auto;
+}
+
+.content {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:30;
+}
+
+
+
+.tableborder2 {
+	border-style: none;
+}
+
+.foodtable {
+  border-collapse: collapse;
+  background-color: #ffcd24;
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.rname {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:30;
+}
+
+.ftype {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:50;
+}
+
+.foodimg {
+	width: 20%;
+}
+	
+.rimg {
+	display: block;
+	margin: auto;
+	width: 70%;
+	height: 150;
+}
+	
