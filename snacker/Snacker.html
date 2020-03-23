@@ -4,22 +4,30 @@
 	  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 	  <link href="style.css" rel="stylesheet"/>
      <title>
-       Snacker©
+       Snacker
      </title>
 	 <link rel="shortcut icon" type="image"
-	 href="https://i.imgur.com/xaWE930.png" />
+	 href="https://i.imgur.com/iPAUB7Y.png" />
   </head>
-  <body style="background-color: #ffeba8;" >
-	<div style="background-color: #ffcd24;">
-	  <h1 style="background-color: #ffcd24;text-align:center; font-family: 'Righteous', cursive; font-size:120; color:white;" onclick="tabImage()"> <img id="logo" src="https://i.imgur.com/Sn7eQFp.gif" width="70" /> SNACKER    <br style="font-family: 'Josefin Sans', sans-serif; text-align:center; font-size:3;"> </h1>
+  <body style="background-color: #FFFFFF;" >
+	<div id="header1">
+	  <h1 style="text-align:center; font-family: 'Righteous', cursive; font-size:120; color:white;" onclick="tabImage()"> <img id="logo" src="https://i.imgur.com/iPAUB7Y.png" width="130" /> SNACKER   <div class="underline1"> </div> <h3 onclick="document.getElementById('chungus').innerHTML = 'Big Chungus is comin for you';" class="slogan" id="chungus" style="margin-left: -50px; margin-top: -70px;">  <img src="https://i.imgur.com/XVU4JS5.png" ><i>Food on the run</i>  </h3></h1>
+	  <div id="navigation"> <p style="margin-left: -100px;">   <a href="#customerapp" style="text-decoration: none; " >Home</a>    <a href="order.html" >Order now</a>      <a href="#Mockups">Mockups</a> </p >	
+	  </div>
+	
 	</div >  
-	<div>
-	<div style="background-image: linear-gradient(to left, #ffdd57, #ffaa00)">	
+	<div id="content">
+	  <img style="margin: auto;" id="pilt1" src=""/></td>
+	
+	      <p> Chungus proximity:<p id="score">Score appears here</p></p>
+	         <p>Meters</p>
+	 
+	<div id="prototypediv">	
 	  <table style="width 100%; margin: auto;">
 	   <tr height="1000">
-	    <td> <h1 color="white">Try out our prototype!</h1> <br> <button style="background-image: linear-gradient(to left, #ffdd57, #ffaa00); margin-right: 100%; height: 200; width: 200; border-color: #ffcd24" border="0">Reeeee</button>
+	    <td> <h1 style="color: white;">Try out our prototype!</h1> <br> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down" ><button class="figmabutton"><p>Click here!</p></button></a>
 		</td>
-		<td> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down"><img style="margin-left: 80%; display: block;" src="https://i.imgur.com/EPCdyBF.png" width="300"/></a>
+		<td> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down"><img style="margin-left: 80%; display: block;" src="https://i.imgur.com/ij27aev.png" width="300"/></a>
 		</td>
 	   <tr>
 	  </table>
@@ -29,15 +37,11 @@
 	
 	
 	  
-	  <img style="margin: auto;" id="pilt1" src=""/></td>
 	
-	      <p> Chungus proximity:<p id="score">Score appears here</p></p>
-	         <p>Meters</p>
 	  
 	  
-	  <img style="margin-left: 90%;"" onclick src="https://image.flaticon.com/icons/svg/727/727866.svg" width="20" />
+	  <img style="margin-left: 90%;"" onclick="night()" src="https://image.flaticon.com/icons/svg/727/727866.svg" width="20" />
 	  
-	  <h3 onclick="document.getElementById('chungus').innerHTML = 'Big Chungus is comin for you';" style="font-family: 'Josefin Sans', sans-serif; text-align:center; font-size:50; background-color: #ffcd24;" color="white"; id="chungus">  <i>Food on the run</i>  </h3>
 	  
 	  
 	  
@@ -49,6 +53,7 @@
 	var score = 10;
 	var num1 = 69;
 	var num2 = 420;
+	var dark = 0;
 	
 	var result = num1 + num2;
 	console.log(result);
@@ -82,17 +87,38 @@
 	}
 	
 	function darkMode() {
-	  
+	  windows.alert('reeee!')
 	
 	}
+
+	function night() {
+		
+		if (dark < 1) {
+			document.body.style.backgroundColor = "#333333";
+			document.getElementById("aids").style.color = "white";
+			document.getElementById("aids2").style.color = "white";
+			document.getElementById("Mockups").style.color = "white";
+			dark = 1;
+		}
+
+		else { 
+			document.body.style.backgroundColor = "#FFFFFF";
+			document.getElementById("aids").style.color = "black";
+			document.getElementById("aids2").style.color = "black";
+			document.getElementById("Mockups").style.color = "black";
+			dark = 0;
+		}
+		
+	}
+	
 	</script>
 	
-	<pre> </pre>
+	<pre> </pre> 
 	<pre> </pre>
 	<pre> </pre>
 	<pre> </pre>
 	
-	<table style="width 100%; margin: auto;">
+	<table style="width 100%; margin: auto;" id="aids">
 	   <tr>
 	     <td> <img src="https://image.flaticon.com/icons/svg/189/189081.svg" width="320"/></td>
 	     <td> <img src="https://image.flaticon.com/icons/svg/2059/2059730.svg" width="400" /> </td>
@@ -103,27 +129,42 @@
 	     <td><h1 class="title"><br>Tasty</td>
 	     <td><h1 class="title"><br>Easy</h1></td>
 	   </tr>
+	   <tr class="titlep" >
+		   <td><p>Snacker is <br> free to use!</p></td>
+		   <td><p> Discover new <br> and amazing tastes!</p></td>
+		   <td><p>It's easy to <br> use on the go!</p></td>
+	   </tr>
 	</table> 
 	 
-	
 
 	
-	
-	grad
-	<hr>
-      <h1 class="title"> Content</h1>
-	   <div text-align="center">
-	     <p>   <a href="#app" class="content">-App description</a> </p>	
-	  
-	     <p>    <a href="#Customer" class="content">-Customer Segment</a> </p>	
-	
-	     <p>     <a href="#Mockups" class="content">-Mockups</a> </p>	
-	   </div>
-	<hr>
+
+	   <div id="customerapp">
+		<table>
+			<tr>
+				<td style="background-color: #FFE17A; padding-left: 20px; padding-right: 20px;"><h2 id="app" class="title"> What does snacker do? </h2>
 	 
-	<div id="rtable" style="margin: auto; width: 50%;">
-		<table border="1" class="foodtable">
-			<tr style="background-color: #ffaa00; height: 150px; ">
+				 <p style="font-size: 24px;"> Snacker suggests the closest food places based on what you want to eat. For example, if you want a milkshake, it tells you where the closest place to get one is. 
+				   The problem it solves is when a person is craving a certain food, they often dont know where to get said food or what the competitors nearby are. Similar apps exist for food delivery systems, but Snacker would just be a simple map based app that <b><i> would be easy to use and navigate.</b></i></p>
+			   
+				<a href="https://docs.google.com/document/d/1sU53vbfL_fMM5Wo7YrP72GcQdgAFnU7TKUO_EMyX1ZQ/edit#">
+				  <p> More info </p>
+				</a> </td>
+			
+				<td style="background-color: #FDE8A3;" id="whois">
+				 <h2 id="Customer" class="title" > Who is it for? </h2>
+	   
+				 <p style="font-size: 24px;"> Snacker is for anybody who gets hungry once in a while and thinks to themselves "I really want this specific food today". So they open snacker and find the nearest place that has that. Our target demographic is mostly young adults and our early adopters will most likely be teens and young adults who know their way around technology.</p>
+				</tdstyle="background-color: #FFE17A;">
+			</tr>
+		</table>
+ 
+	 </div>
+
+	 
+	<div class="rtable" id="rtable1">
+		<table class="foodtable">
+			<tr style="background-color: #FFCD24; height: 150px; ">
 				<th class="ftype">Sushi<img src="https://image.flaticon.com/icons/svg/135/135659.svg" class="foodimg"/> </th>
 				<th class="ftype">Burger<img src="https://image.flaticon.com/icons/svg/1046/1046784.svg" class="foodimg"/></th>
 				<th class="ftype">Pasta<img src="https://image.flaticon.com/icons/svg/590/590810.svg" class="foodimg"/></th>
@@ -192,46 +233,42 @@
 		  </tr>-->
 		 </table>
 	</div>
-	<hr>
-	  <h2 id="app" class="title"> App description </h2>
-    
-	    <p> My app would suggest the closest food places based on what you want to eat. For example, if you want a milkshake, it tells you where the closest place to get one is. 
-          The problem it solves is when a person is craving a certain food, <br> but doesnt know where to get said food (also google search or similar doesnt suggest the closest or best place, just if it finds the keyword you search for then it will maybe suggest something vaguely similar). Similar apps exist for food delivery systems, <br> but my app would just be a simple map based app that <b><i> would be easy to use and navigate.</b></i></p>
-      
-	   <a href="https://docs.google.com/document/d/1sU53vbfL_fMM5Wo7YrP72GcQdgAFnU7TKUO_EMyX1ZQ/edit#">
-	     <p> More info </p>
-	   </a>
+	  
 	
-	<hr>
 	
-	  <h2 id="Customer" class="title"> Customer Segment </h2>
-      
-	  <p> The userbase would be mostly younger people (teenagers and young adults) who are familiar with technology.</p>
-	   
-	<hr>
+
+	 
     
-	  <h2 id="Mockups" class="title"> Mockups </h2>
- 
-	    <h1>Wireframe</h1>
+	  <h2 class="title" id="aids2"> Mockups </h2>
+    <table id="Mockups">
+	  <tr>
+		<td><h1>Wireframe</h1>
        
-	  <img style="margin: auto; display: block;" src="https://i.imgur.com/SmVZrSS.jpg" width="500" />
+	  <img style="margin: auto; display: block;" src="https://i.imgur.com/SmVZrSS.jpg" width="500" /> </td>
     
-	    <h1>First Mockup</h1>
+	    <td><h1>First Mockup</h1>
 
 	  <a href="https://docs.google.com/document/d/1sU53vbfL_fMM5Wo7YrP72GcQdgAFnU7TKUO_EMyX1ZQ/edit#">
 	       <img style="margin: auto; display: block;" src="https://i.imgur.com/uYrp3v9.jpg" width="500"/>
-      </a>
+      </a></td>
 	    
-		<h1>Figma designs</h1>
+		<td><h1>Early Figma designs</h1>
 
 	  <a href="https://www.figma.com/file/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=0%3A1">
 	       <img style="margin: auto; display: block;" src="https://i.imgur.com/EPCdyBF.png" width="500"/>
-      </a>
-
+	  </a>
+	  </td>
+	  </tr>
+	</table>  
 
 	   
-	   <hr>
 	
-	     
+	</div >
+
+
+	<div id="footer">
+        <p> All rights seserved to Mr.Clean, our superior overlord.</p>
+	</div>
+
   </body>
 </html>  
