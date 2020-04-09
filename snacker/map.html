@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Order</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	 <link href="style.css" rel="stylesheet"/>
+    
+	 <link rel="shortcut icon" type="image"
+	 href="https://i.imgur.com/iPAUB7Y.png" />
+  </head>
+  <body style="background-color: #FFFFFF;" >
+	<div id="header1">
+		<h1 style="text-align:center; font-family: 'Righteous', cursive; font-size: 70px; color:white; margin: none;" > <img id="logo" src="https://i.imgur.com/iPAUB7Y.png" width="100" /> SNACKER   <div class="underline1"> </div> <h3  class="slogan" id="chungus" style="margin-left: -50px; margin-top: -30px; font-size: 30px;">  <img style="width:50px;" src="https://i.imgur.com/XVU4JS5.png" ><i>Food on the run</i>  </h3></h1>
+		<div id="navigation"> <p style="margin-left: -100px;">   <a href="snacker.html" style="text-decoration: none; " >Home</a>    <a href="map.html" >Search</a>      <a href="faq.html">About</a> </p >	
+		</div>
+	  
+	  </div >  
+	
+	
+	
+
+
+
+	<table style="margin-left: 10%;">
+		<tr>
+			<td>
+				
+				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1063795.3861210619!2d23.811254706141096!3d58.616964393486796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692949c82a04bfd%3A0x40ea9fba4fb425c3!2sEesti!5e0!3m2!1set!2see!4v1585849047830!5m2!1set!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+				
+			</td>
+			<td>
+				<div class="input-field" style="position: absolute; top: 360px;">
+					<input placeholder="Type something!" id="inp-box" type="text" list="suggestions">
+						<datalist id="suggestions">
+							<option value="Peetri Pizza">
+							<option value="McDonalds">
+							<option value="Chopsticks">
+							<option value="Hesburger">
+						</datalist>
+					<button id="find-btn" onclick="findPlace()">Find</button>
+				</div>
+				<div id="info" style="width: 40%; height: 500; position: absolute; padding: 0; top: 420px; margin-left:10px; text-align: left;"> 
+					<H1 style="position: absolute; top: 0px; font-size: 40px;">Search for a food or restaurant!</H1>
+					<p style="margin-top: 100px; text-align: left; font-size: 20px;"> Type in a food or restaurant name above and we <br> will suggest the nearest places of interest near you!</p>
+					<img style="height: 300px; margin-top: 40px;" src="https://image.flaticon.com/icons/svg/2670/2670180.svg" alt="">
+					
+				</div>
+				
+			</td> 
+		</tr>
+	</table> 
+
+	
+	
+	<script>
+		var modal1 = document.getElementById("menuList");
+
+		var input = document.getElementById("inp-box");
+		window.onscroll = function() {scroller()};
+		var header = document.getElementById("navigation");
+		var sticky = header.offsetTop;
+		var dark = 0;
+		var score = 10;
+
+		var pizza = ["pizza", "pitsa", "fransescano", "Peetri Pizza"];
+		var burger = ["burger", "burks", "hesburger", "Hesburger"];
+		var chinese = ["chopsticks", "chinese food", "spicy food", "Chopsticks", "chinese", "hiina", "aasia"]
+		var mcDonalds = ["McDonalds", "mcdonalds", "big tasty",]
+
+		function findPlace() {
+			input = document.getElementById("inp-box").value;
+			if (pizza.includes(input)) {
+				document.getElementById("map").innerHTML = '';
+				document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.4519661248842!2d24.660347634156278!3d59.40885539169739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929452066ec619%3A0x7d3eb1b9d04fa859!2sPeetri%20Pizza!5e0!3m2!1set!2see!4v1585841785319!5m2!1set!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+				document.getElementById("inp-box").value = '';		
+				document.getElementById("info").innerHTML = '<H1 style=" text-align: left;">Peetri Pizza </H1> <img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://i.imgur.com/fGtaiH5.png" alt=""> <p style="text-align: left; font-size: 20px;"> Here you can always buy delicious pizzas to go!</p> <button id="menubut" onclick="openMenu()" value="0">Menu</button><h2 style="text-align: left;">Open:</h2> <p style="text-align: left; font-size: 20px;">  Mon - Thur: 11.00 - 21.00 Fr - Sat : 11.00 - 23.00 <br> Sun: 11.00 - 20.00</p> <div id="caution">  <img style="width: 40px;" src="https://image.flaticon.com/icons/svg/1768/1768400.svg" alt=""> <p>  NB! Due to the recent pandemic, some restaurants may have changed their opening times or have closed entirely!</p></div><p style="text-align: left; font-size: 20px;"> <img style="width: 20px; padding-top: 20px;" src="https://image.flaticon.com/icons/svg/684/684853.svg" alt=""> (+372) 50 59 109</p> <div id="menuList"> </div>';
+				document.getElementById("menuList").innerHTML = '<div id="menuPage"> <h1>Peetri Pizza <br> Menu</h1> <table> <tr> <td style="width: 400px; margin-left:40px;"> <h2 style="text-align: left;">Name</h2></td> <td><h2>Small</h2></td><td><h2>Big</h2></td></tr><tr> <td style="width: 400px;margin-left:40px;"> <p>Americana</p> <p>Francescana</p><p>Mafioso</p><p>Margherita</p><p>Peetri Pizza</p><p>Topolino</p><p>Vegetariana</p></td> <td><h2>4,30€</h2><h2>4,50€</h2><h2>4,50€</h2><h2>3,90€</h2><h2>4,50€</h2><h2>4,50€</h2><h2>4,30€</h2></td><td><h2>7,40€</h2><h2>7,60€</h2><h2>7,60€</h2><h2>5,80€</h2><h2>7,60€</h2><h2>7,40€</h2><h2>7,40€</h2></td></tr></table> <div class="menuItems"></div></div>';
+
+			} else if (burger.includes(input)) {
+				document.getElementById("map").innerHTML = '';
+				document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.4236774515643!2d24.682894716157058!3d59.40932731164775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f8724448f9%3A0x1769df585cdf38bb!2sHesburger%20Mustam%C3%A4e!5e0!3m2!1set!2see!4v1585846159455!5m2!1set!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+				document.getElementById("inp-box").value = '';
+				document.getElementById("info").innerHTML = '<H1 style=" text-align: left;">Hesburger </H1> <img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""><img style="width: 30px; padding: 5px;" src="https://image.flaticon.com/icons/svg/1828/1828884.svg" alt=""> <p style="text-align: left; font-size: 20px;"> Delicious burgers made just for you.</p> <button id="menubut" onclick="openMenu()" value="0">Menu</button><h2 style="text-align: left;">Open:</h2> <p style="text-align: left; font-size: 20px;">  Every day 10-23</p> <div id="caution">  <img style="width: 40px;" src="https://image.flaticon.com/icons/svg/1768/1768400.svg" alt=""> <p>  NB! Due to the recent pandemic, some restaurants may have changed their opening times or have closed entirely!</p></div><p style="text-align: left; font-size: 20px;"> <img style="width: 20px; padding-top: 20px;" src="https://image.flaticon.com/icons/svg/684/684853.svg" alt=""> (+372) 58501211</p> <div id="menuList"> </div>';
+			} else if (chinese.includes(input)) {
+				document.getElementById("map").innerHTML = '';
+				document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.4726814136448!2d24.68686681615699!3d59.40850981171335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f9b46013e5%3A0x971566415ac792cb!2sChopsticks%20Mustam%C3%A4e%20Keskus!5e0!3m2!1set!2see!4v1585847635521!5m2!1set!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+				document.getElementById("inp-box").value = '';
+				document.getElementById("info").innerHTML = '<H1 style=" text-align: left;">Chopsticks</H1>';
+			} else if (mcDonalds.includes(input)) {
+				document.getElementById("map").innerHTML = '';
+				document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2028.4454906766694!2d24.87251421615808!3d59.442322308999614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692ecee44427281%3A0x6290e8d53c26047d!2sMcDonald&#39;s%20Lasnam%C3%A4e!5e0!3m2!1set!2see!4v1585849161147!5m2!1set!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+				document.getElementById("inp-box").value = '';
+				document.getElementById("info").innerHTML = '<H1 style=" text-align: left;">McDonalds</H1>';
+			} else {
+				document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1063795.3861210623!2d23.811254706141085!3d58.61696439348678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692949c82a04bfd%3A0x40ea9fba4fb425c3!2sEesti!5e0!3m2!1set!2see!4v1585849233711!5m2!1set!2see" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+				document.getElementById("inp-box").value = '';
+				document.getElementById("info").innerHTML = '<H1 style="font-size:50px; text-align: left;">No results</H1> <img style="width: 200px; " src="https://image.flaticon.com/icons/svg/2274/2274307.svg" alt=""> <p style="text-align:left; font-size:30px; padding: 5px;"> We did not find any results for this <br> search.  Please try searching another term <br> or check your spelling.</p>';
+				
+			} 
+		}	
+
+		window.onclick = function(event) {
+  		if (event.target == document.getElementById("menuList")) {
+  		  document.getElementById("menuList").style.display = "none";
+  		}
+		}
+
+		function scroller() {
+		if (window.pageYOffset > sticky) {
+    		header.classList.add("sticky");
+ 		} else {
+    		header.classList.remove("sticky");
+ 		}
+		}
+
+		function openMenu() {
+				console.log("eee");
+				document.getElementById("menuList").style.display = "block";
+		}
+
+		input.addEventListener("keyup", function(event) {
+  	      if (event.keyCode === 13) {
+   			event.preventDefault();
+  			 document.getElementById("find-btn").click();
+  			}
+		});
+
+
+
+	</script>
+  </body>
+</html>  

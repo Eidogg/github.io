@@ -12,22 +12,21 @@
   <body style="background-color: #FFFFFF;" >
 	<div id="header1">
 	  <h1 style="text-align:center; font-family: 'Righteous', cursive; font-size:120; color:white;" onclick="tabImage()"> <img id="logo" src="https://i.imgur.com/iPAUB7Y.png" width="130" /> SNACKER   <div class="underline1"> </div> <h3 onclick="document.getElementById('chungus').innerHTML = 'Big Chungus is comin for you';" class="slogan" id="chungus" style="margin-left: -50px; margin-top: -70px;">  <img src="https://i.imgur.com/XVU4JS5.png" ><i>Food on the run</i>  </h3></h1>
-	  <div id="navigation"> <p style="margin-left: -100px;">   <a href="#customerapp" style="text-decoration: none; " >Home</a>    <a href="order.html" >Order now</a>      <a href="#Mockups">Mockups</a> </p >	
+	  <div id="navigation"> <p style="margin-left: -100px;">   <a href="#customerapp" style="text-decoration: none; " >Home</a>    <a href="map.html" >Search</a>      <a href="faq.html">About</a> <img id="moon" style="padding: none; height: auto; position: absolute; right: 50px;" onclick="night()" src="https://i.imgur.com/Ia67RD6.png" width="20" /></p >	
 	  </div>
 	
 	</div >  
 	<div id="content">
 	  <img style="margin: auto;" id="pilt1" src=""/></td>
 	
-	      <p> Chungus proximity:<p id="score">Score appears here</p></p>
-	         <p>Meters</p>
+	     
 	 
 	<div id="prototypediv">	
 	  <table style="width 100%; margin: auto;">
 	   <tr height="1000">
-	    <td> <h1 style="color: white;">Try out our prototype!</h1> <br> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down" ><button class="figmabutton"><p>Click here!</p></button></a>
+	    <td style="padding-left: 15%;"> <h1 style="color: white; font-size: 90px;">Try out our prototype!</h1> <br> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down" ><button class="figmabutton"><h1 style="font-size:40px; margin-top: 12;">Click here!</h1></button></a>
 		</td>
-		<td> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down"><img style="margin-left: 80%; display: block;" src="https://i.imgur.com/ij27aev.png" width="300"/></a>
+		<td> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down"><img style="margin-left: 1%; display: block;" src="https://i.imgur.com/ij27aev.png" width="300"/></a>
 		</td>
 	   <tr>
 	  </table>
@@ -40,7 +39,7 @@
 	
 	  
 	  
-	  <img style="margin-left: 90%;"" onclick="night()" src="https://image.flaticon.com/icons/svg/727/727866.svg" width="20" />
+	  
 	  
 	  
 	  
@@ -50,13 +49,12 @@
 	
     
     <script>
-	var score = 10;
-	var num1 = 69;
-	var num2 = 420;
+    window.onscroll = function() {scroller()};
+	var header = document.getElementById("navigation");
+	var sticky = header.offsetTop;
 	var dark = 0;
+	var score = 10;
 	
-	var result = num1 + num2;
-	console.log(result);
 	
 	//addNumbers(num1, num2);
 	
@@ -86,10 +84,7 @@
 		console.log(score);
 	}
 	
-	function darkMode() {
-	  windows.alert('reeee!')
 	
-	}
 
 	function night() {
 		
@@ -98,6 +93,7 @@
 			document.getElementById("aids").style.color = "white";
 			document.getElementById("aids2").style.color = "white";
 			document.getElementById("Mockups").style.color = "white";
+			document.getElementById("moon").src = 'https://i.imgur.com/DF5BnXc.png';
 			dark = 1;
 		}
 
@@ -106,9 +102,18 @@
 			document.getElementById("aids").style.color = "black";
 			document.getElementById("aids2").style.color = "black";
 			document.getElementById("Mockups").style.color = "black";
+			document.getElementById("moon").src = 'https://i.imgur.com/Ia67RD6.png';
 			dark = 0;
 		}
 		
+	}
+
+	function scroller() {
+		if (window.pageYOffset > sticky) {
+    		header.classList.add("sticky");
+ 		} else {
+    		header.classList.remove("sticky");
+ 		}
 	}
 	
 	</script>
@@ -144,8 +149,8 @@
 			<tr>
 				<td style="background-color: #FFE17A; padding-left: 20px; padding-right: 20px;"><h2 id="app" class="title"> What does snacker do? </h2>
 	 
-				 <p style="font-size: 24px;"> Snacker suggests the closest food places based on what you want to eat. For example, if you want a milkshake, it tells you where the closest place to get one is. 
-				   The problem it solves is when a person is craving a certain food, they often dont know where to get said food or what the competitors nearby are. Similar apps exist for food delivery systems, but Snacker would just be a simple map based app that <b><i> would be easy to use and navigate.</b></i></p>
+				 <p style="font-size: 24px;"> Snacker suggests the closest food establishments based on what you want to eat. For example, if you want a milkshake, it tells you where the closest place to get one is. 
+				   </p>
 			   
 				<a href="https://docs.google.com/document/d/1sU53vbfL_fMM5Wo7YrP72GcQdgAFnU7TKUO_EMyX1ZQ/edit#">
 				  <p> More info </p>
@@ -154,7 +159,7 @@
 				<td style="background-color: #FDE8A3;" id="whois">
 				 <h2 id="Customer" class="title" > Who is it for? </h2>
 	   
-				 <p style="font-size: 24px;"> Snacker is for anybody who gets hungry once in a while and thinks to themselves "I really want this specific food today". So they open snacker and find the nearest place that has that. Our target demographic is mostly young adults and our early adopters will most likely be teens and young adults who know their way around technology.</p>
+				 <p style="font-size: 24px;"> Snacker is for anybody who gets hungry once in a while and thinks to themselves "I really want this specific food today". So they open snacker and find the nearest place that has that. </p>
 				</tdstyle="background-color: #FFE17A;">
 			</tr>
 		</table>
@@ -162,100 +167,30 @@
 	 </div>
 
 	 
-	<div class="rtable" id="rtable1">
-		<table class="foodtable">
-			<tr style="background-color: #FFCD24; height: 150px; ">
-				<th class="ftype">Sushi<img src="https://image.flaticon.com/icons/svg/135/135659.svg" class="foodimg"/> </th>
-				<th class="ftype">Burger<img src="https://image.flaticon.com/icons/svg/1046/1046784.svg" class="foodimg"/></th>
-				<th class="ftype">Pasta<img src="https://image.flaticon.com/icons/svg/590/590810.svg" class="foodimg"/></th>
-			</tr>
-			<tr style="height: 300;">
-				<td>
-					<a href="item.html">
-					<img class="rimg" src="https://lh5.googleusercontent.com/p/AF1QipOsTCw895-5vwydfi0FkJ99IBmVyTs-jpruTTYk=w425-h240-k-no"/>
-					<br>				
-					</a>
-					<p class="rname">Gurmee Sushi<br>
-					<p class="distance">500m</p>
-				</td>
-				<td>
-					<a href="https://sushistop.com/">
-					<img class="rimg" src="https://i.imgur.com/fWBBxDf.jpg"/>
-					<br>				
-					</a>
-					<p class="rname">Sushi stop<br>
-					<p class="distance">500m</p>
-				</td>
-				<td>
-					<a href="https://sushistop.com/">
-					<img class="rimg" src="https://i.imgur.com/fWBBxDf.jpg"/>
-					<br>				
-					</a>
-					<p class="rname">Sushi stop<br>
-					<p class="distance">500m</p>
-				</td>				
-			</tr>
-			<tr style="height: 300;">
-				<td>
-					<a href="https://sushistop.com/">
-					<img class="rimg" src="https://i.imgur.com/fWBBxDf.jpg"/>
-					<br>				
-					</a>
-					<p class="rname">Sushi stop<br>
-					<p class="distance">500m</p>
-				</td>
-				<td>
-					<a href="https://sushistop.com/">
-					<img class="rimg" src="https://i.imgur.com/fWBBxDf.jpg"/>
-					<br>				
-					</a>
-					<p class="rname">Sushi stop<br>
-					<p class="distance">500m</p>
-				</td>
-				<td>
-					<a href="https://sushistop.com/">
-					<img class="rimg" src="https://i.imgur.com/fWBBxDf.jpg"/>
-					<br>				
-					</a>
-					<p class="rname">Sushi stop<br>
-					<p class="distance">500m</p>
-				</td>				
-			</tr>			
-			
-		<!--
-		   <td> <a href="http://www.mcdonalds.ee/et/liituge-meiega"><img src="https://i.imgur.com/ziTFN76.jpg"/> <br> <pre></a>    <p face ="elephant">McDonald's <br>       <p face ="elephant" style color="gray;">       2km </pre> <hr></td>
-		   <td> <a href="http://www.attimo.ee/"><img src="https://i.imgur.com/fa6b8Nt.jpg"/> <br> <pre></a>    <p face ="elephant">     Attimo <br>       <p face ="elephant" style color="gray;">      19km </pre> <hr></td>
-		  </tr>
-		  <tr>
-		   <td> <a href="https://www.mysushi.ee/"><img src="https://i.imgur.com/wDdHQUR.jpg"/> <br> <pre></a>    <p face ="elephant">  MySushi <br>       <p face ="elephant" style color="gray;">     300m </style></pre> <hr></td>
-		   <td> <a href="https://www.hesburger.ee/toootsijale"><img src="https://i.imgur.com/KQqbdpt.jpg" /> <br> <pre></a>    <p face ="elephant">  Hesburger <br>       <p face ="elephant" style color="gray;">        1km </style></pre> <hr></td>
-		   <td> <a href="https://www.hesburger.ee/toootsijale"><img src="https://i.imgur.com/fa6b8Nt.jpg" /> <br> <pre></a>  <p face ="elephant">  Maxima pasta <br>     <p face ="elephant" style color="gray;">Coming closer </style></pre> <hr></td>
-		  </tr>-->
-		 </table>
-	</div>
+	
 	  
 	
 	
 
 	 
     
-	  <h2 class="title" id="aids2"> Mockups </h2>
+	  <h2 class="title" id="aids2" style="padding: 60px;"> Prototype </h2>
     <table id="Mockups">
 	  <tr>
-		<td><h1>Wireframe</h1>
+		<td><h1>Navigation</h1>
        
-	  <img style="margin: auto; display: block;" src="https://i.imgur.com/SmVZrSS.jpg" width="500" /> </td>
+	  <img style="margin: auto; display: block;" src="https://i.imgur.com/KTgre51.png"  /> </td>
     
-	    <td><h1>First Mockup</h1>
+	    <td><h1>Profile</h1>
 
 	  <a href="https://docs.google.com/document/d/1sU53vbfL_fMM5Wo7YrP72GcQdgAFnU7TKUO_EMyX1ZQ/edit#">
-	       <img style="margin: auto; display: block;" src="https://i.imgur.com/uYrp3v9.jpg" width="500"/>
+	       <img style="margin: auto; display: block;" src="https://i.imgur.com/GzWQyms.png"/>
       </a></td>
 	    
-		<td><h1>Early Figma designs</h1>
+		<td><h1>Home page</h1>
 
 	  <a href="https://www.figma.com/file/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=0%3A1">
-	       <img style="margin: auto; display: block;" src="https://i.imgur.com/EPCdyBF.png" width="500"/>
+	       <img style="margin: auto; display: block;" src="https://i.imgur.com/KMHKbzc.png"/>
 	  </a>
 	  </td>
 	  </tr>
