@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Chinese Communist Party</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    
+    <input id="inputty" type="number"> 
+
+<button onclick="Generate()">Generate</button>
+
+
+<div id="stats"> </div>
+<div id="selection">
+    <select id="selc">
+        <option value="0">Day</option>
+        <option value="1">Cold days</option>
+        <option value="2">Warm days</option>
+      </select>
+      <button onclick="sortout()">Sort</button>
+</div>
+<div id="placeHere"></div>
+
+<script>
+
+    var measurements = 0;
+    var temps = [];  
+    var daynum = []; 
+    var temps2 = [];
+    
+
+    var total = 0;
+    var day = 1;
+
+    var sorter = 0;
+    var x = document.getElementById("selection");
+
+    
+    x.style.display = "none";
+    
+  
+    
+    
+    function Generate(){
+        measurements = document.getElementById("inputty").value;
+        console.log(measurements);
+        x.style.display = "block";
+
+        document.getElementById("placeHere").innerHTML = '';
+        document.getElementById("stats").innerHTML = '';
+
+
+        //document.getElementById("placeHere").removeChild(newTemp.childNodes[0]);
+
+        //var newTemp = document.createElement("DIV");
+
+    for (var index = 0; index < measurements; index++) {
+        var temperature = Math.floor(Math.random() * 40);
+        var newTemp = document.createElement("DIV");
+        var tempText = temperature;
+        if (temperature < 10) {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/642/642000.svg"  >'
+        }
+        
+        else {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/890/890347.svg"  >'
+        }
+        
+        
+        newTemp.innerHTML = pic + "Day" + "  " + day + "<br>" + tempText + "°C";
+        document.getElementById("placeHere").appendChild(newTemp);
+
+        total = total + temperature;
+        temps.push(temperature);
+        temps2.push(temperature);
+        daynum.push(day);
+        day = day + 1;
+
+        console.log(day);
+        console.log(daynum);
+    }
+
+    //var newTemp = document.createElement("DIV");
+
+    //newTemp.innerHTML = 
+
+
+    //temps2 = temps;
+    console.log("here is mcnuget" + temps2);
+
+
+    console.log(temps);
+    console.log("total is " + total);
+    console.log("avg " + (total / temps.length)) ;
+
+    temps.sort(function(a, b){return a - b});
+   
+    console.log(temps);
+
+    console.log("min is " + temps[0]);
+    console.log("max is " + temps[temps.length - 1]);
+    
+    var min = document.createElement("P");
+        var minText = temps[0];
+        min.innerHTML = "Min:" + minText + "°C";
+        document.getElementById("stats").appendChild(min);
+    
+    
+    var max = document.createElement("P");
+        var maxText = temps[temps.length - 1];
+        max.innerHTML = "Max:" + maxText + "°C";
+        document.getElementById("stats").appendChild(max);
+    
+    var avg = document.createElement("P");
+        var avgText = Math.round(total / temps.length);
+        avg.innerHTML = "Average:" + avgText + "°C";
+        document.getElementById("stats").appendChild(avg);
+
+    day = 1;
+    console.log("here is mcnuget22222" + temps2);
+    }
+
+
+
+    function maxfuck() {
+        temps.sort(function(a, b){return b - a});
+        console.log(temps[0]);
+
+        
+    
+    }
+
+    function sortout() {
+ 
+        sorter = document.getElementById("selc").value;
+        console.log(sorter);
+        document.getElementById("placeHere").innerHTML = '';
+
+        if (sorter == 1) {
+            temps.sort(function(a, b){return a - b});
+            console.log(temps);
+            console.log(temps2);
+
+            for (var index = 0; index < measurements; index++) {
+            
+        var temperature = temps[index];
+        var newTemp = document.createElement("DIV");
+        var tempText = temperature;
+        if (temperature < 10) {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/642/642000.svg"  >'
+        }
+        
+        else {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/890/890347.svg"  >'
+        }
+        
+        
+        newTemp.innerHTML = pic + "Day" + "  " + day + "<br>" + tempText + "°C";
+        document.getElementById("placeHere").appendChild(newTemp);
+
+        total = total + temperature;
+        //temps.push(temperature);
+        day = day + 1;
+
+        console.log(day);
+        }
+        day = 1;
+        console.log(temps2);
+        }
+
+        else if (sorter == 2) {
+            temps.sort(function(a, b){return b - a});
+            console.log(temps);
+            console.log(temps2);
+
+            for (var index = 0; index < measurements; index++) {
+        
+        var temperature = temps[index];
+        var newTemp = document.createElement("DIV");
+        var tempText = temperature;
+        if (temperature < 10) {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/642/642000.svg"  >'
+        }
+        
+        else {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/890/890347.svg"  >'
+        }
+        
+        
+        newTemp.innerHTML = pic + "Day" + "  " + day + "<br>" + tempText + "°C";
+        document.getElementById("placeHere").appendChild(newTemp);
+
+        total = total + temperature;
+        //temps.push(temperature);
+        day = day + 1;
+
+        console.log(day);
+        }
+        day = 1;
+        console.log(temps2);
+        }
+
+        else {
+            
+            console.log(temps2);
+            for (var index = 0; index < measurements; index++) {
+        
+        var temperature = temps2[index];
+        var newTemp = document.createElement("DIV");
+        var tempText = temperature;
+        if (temperature < 10) {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/642/642000.svg"  >'
+        }
+        
+        else {
+            var pic = '<img src="https://image.flaticon.com/icons/svg/890/890347.svg"  >'
+        }
+        
+        
+        newTemp.innerHTML = pic + "Day" + "  " + day + "<br>" + tempText + "°C";
+        document.getElementById("placeHere").appendChild(newTemp);
+
+        total = total + temperature;
+        //temps.push(temperature);
+        day = day + 1;
+
+        console.log(day);
+        }
+        day = 1;
+        }
+
+        
+    }
+
+    //var temps = arr  
+    //arr.reduce((a,b) => a + b, 0) / arr.length;
+    
+
+</script>
+
+
+
+</body>
+</html>
