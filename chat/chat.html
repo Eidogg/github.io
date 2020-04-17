@@ -1,0 +1,150 @@
+<html>
+  <head>
+      <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	  <link href="style.css" rel="stylesheet"/>
+     <title>
+       Snacker
+     </title>
+	 <link rel="shortcut icon" type="image"
+	 href="https://i.imgur.com/iPAUB7Y.png" />
+  </head>
+  <body style="background-color: #FFFFFF;" >
+	<div id="header1">
+	  <h1 style="text-align:center; font-family: 'Righteous', cursive; font-size:120; color:white;" onclick="tabImage()"> <img id="logo" src="https://i.imgur.com/iPAUB7Y.png" width="130" /> SNACKER   <div class="underline1"> </div> <h3 onclick="document.getElementById('chungus').innerHTML = 'Big Chungus is comin for you';" class="slogan" id="chungus" style="margin-left: -50px; margin-top: -70px;">  <img src="https://i.imgur.com/XVU4JS5.png" ><i>Food on the run</i>  </h3></h1>
+	  <div id="navigation"> <p style="margin-left: -100px;">   <a href="snacker.html" style="text-decoration: none;" >Home</a>    <a href="#rtable1" >Order now</a>      <a href="#Mockups">Mockups</a> </p >	
+	  </div>
+	
+	</div >  
+
+
+	<div id="chatHeader">
+		<h1> Chats</h1>
+		
+		<div id="chatList">
+		   
+			
+			<table>
+			   <tr>
+				   <td class="Con1">
+					<div id="search">
+						<h1>Search</h1>
+						<input placeholder="Search contacts..." type="text" style="padding-left: 5px; margin-left: 10%; display: block; width: 60%; border-radius: 5px; border: solid; border-width: 1px; border-color: grey; height: 25px;">
+					</div> 
+					
+				   </td>
+				   <td style="width:100%">
+					 <div style="height: 650px; width: 100%; padding: 0; margin: 0; background-color: white; margin-top: 20px;">  
+					  
+						<div class="chat1"><img src="https://www.migration-center.com/wp-content/uploads/2016/04/profile_picture_round_fredrik_olsson.png" alt=""> <h1 style="padding: 0; margin-top: -50px; text-align: left; margin-left: 90px;">Oleg Borodjuk</h1>  <p style="padding: 0; margin-top: -15px; text-align: left; margin-left: 95px; font-size: 20px;">Last active 8 hours ago</p> </div>
+						
+						<div id="chatbox" style="height: 520px; overflow-y:scroll;">
+						 <div><p id="mymes"></p><h3>18:32</h3></div>
+						 <div id="hemes1" style="margin-left: 80px;"><p id="hemes"></p><h3>18:36</h3></div>
+
+
+					   </div>
+
+					   <div id="typebox" >
+						   
+						<input id="message" type="text" style=" height:30px; width:700px; border-radius: 5px; border-color: white;" placeholder="Type something"> <button id="insert" style="height:30px;" onclick="sendText()">Send</button>
+					   </div>
+				         
+				
+				     </div>
+				   </td>
+			   </tr>
+		   </table>
+		</div>
+
+	</div>
+	
+	<script>
+        var minutes = 0;
+		var today = new Date();
+		if (today.getMinutes() < 10) {
+			minutes = "0" + today.getMinutes();
+		}else{
+			minutes = today.getMinutes();
+		}
+		
+        var time = today.getHours() + ":" + minutes;
+
+		var input = document.getElementById("myInput");
+		var profilePic = "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png' id='profileP'>";
+		var hprofilePic = "<img src='https://www.migration-center.com/wp-content/uploads/2016/04/profile_picture_round_fredrik_olsson.png' id='hprofileP'>";
+		const texts1 = ['Hey! Are you the owner of Vilde Grill?'];
+		const texts2 = ['Yeah, thats me.'];
+
+		document.getElementById("mymes").innerHTML = texts1[0] + profilePic;
+		document.getElementById("hemes").innerHTML = texts2[0] + hprofilePic;
+		function sendText() {
+			var messageT = document.getElementById("message").value;
+			
+            /*if (document.getElementById("message").value = '') {
+				console.log("wrong");
+			}*/
+			if (document.getElementById("message").value === '' ) {
+				
+			} else if (messageT.substring(0,5) === 'https' ) {
+				var mDiv = document.createElement("div");
+			
+			console.log(document.getElementById("message").value);
+			var timeS = document.createElement("h3");
+			//var mShell = document.createElement("div");
+			timeS.innerHTML = time;
+			var mBody = document.createElement("p");
+			mBody.innerHTML = messageT + profilePic;
+			console.log(mBody);
+			mDiv.appendChild(mBody);
+			mDiv.appendChild(timeS);
+			
+
+			//mShell.appendChild(mDiv);
+			document.getElementById("chatbox").appendChild(mDiv);
+			var imgur = document.createElement("img");
+			imgur.src = document.getElementById("message").value;
+			imgur.id = 'imgur';
+			document.getElementById("chatbox").appendChild(imgur);
+			
+			
+			
+			document.getElementById("message").value = '' ;
+			}
+			else {
+            var mDiv = document.createElement("div");
+			
+			console.log(document.getElementById("message").value);
+			var timeS = document.createElement("h3");
+			//var mShell = document.createElement("div");
+			timeS.innerHTML = time;
+			var mBody = document.createElement("p");
+			mBody.innerHTML = messageT + profilePic;
+			console.log(mBody);
+			mDiv.appendChild(mBody);
+			mDiv.appendChild(timeS);
+			
+
+			//mShell.appendChild(mDiv);
+			document.getElementById("chatbox").appendChild(mDiv);
+
+			
+			document.getElementById("message").value = '' ;
+			}
+
+		}
+
+
+
+
+
+		console.log(time);
+	</script>
+
+
+	<div id="footer">
+        <p> All rights seserved to Mr.Clean, our superior overlord.</p>
+	</div>
+
+  </body>
+</html>  

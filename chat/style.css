@@ -1,0 +1,362 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, p {
+		font-family: 'Josefin Sans', sans-serif;
+		text-align:center;
+		
+	  }
+	  
+.title {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:70;
+}
+
+.rtable img {
+	display: block;
+	margin: auto;
+	width: 70%;
+	height: auto;
+}
+
+.content {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:30;
+}
+
+
+
+.tableborder2 {
+	border-style: none;
+}
+
+.foodtable {
+  border-collapse: collapse;
+  background-color: #FFE17A;
+  padding: 10px;
+  border-radius: 13px;
+  border: solid;
+  
+}
+
+.rname {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:30;
+}
+
+.ftype {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:50;
+}
+
+.ftype img {
+	width: 20%;
+}
+
+.foodimg img{
+	width: 20px;
+    
+}
+	
+.rimg {
+	display: block;
+	margin: auto;
+	width: 70%;
+	height: 150;
+}
+
+.figmabutton {
+	background-image: linear-gradient(to left, #ffdd57, #ffaa00);
+	width: 500px;
+	height: 50px;
+	margin-left: 30%;
+	border-radius: 10px;
+	border-color: black;
+	
+}
+
+.slogan {
+	font-family: 'Josefin Sans', sans-serif; 
+	text-align:center; 
+	font-size:50; 
+	color: white;
+	padding-bottom: 20px;
+	margin-left: 5%;
+}
+
+.underline1 {
+	width: 500px; 
+	height: 10px; 
+	background-color: #ffcd24; 
+	margin-left: 40%;
+	border-radius: 3px;
+
+}
+
+#header1 {
+	background-image: url('https://c.pxhere.com/photos/99/f6/background_food_tasty_olives_wooden_background_cooking_plate_kitchen-1369813.jpg!d');
+	background-repeat: no-repeat;
+    background-size: 100%;
+	padding: none;
+	width: 100%;
+    margin-top: -10px;
+	padding-top: 1px;
+	position: relative;
+	
+}
+
+/*#header1::after {
+	position: absolute;
+	opacity: 0.8;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	content: '';
+	top: 0;
+	bottom: 0;
+}
+*/
+
+
+#content {
+  margin-top: 100px;	
+}
+
+#prototypediv {
+	background-image: url('https://wallpaperaccess.com/full/462860.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	
+}
+
+.rtable {
+	margin: auto; 
+	width: 50%;
+
+}
+	
+#customerapp td{
+	height: 500px;
+	width: 40%;
+	margin:auto;
+}
+
+#customerapp {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	height: 500px;
+}
+
+#navigation {
+	background-color: black;
+	height: 50px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	padding-top: 1px;
+}
+
+#navigation a {
+	text-decoration: none;
+	color: white;
+	padding-left: 120px;
+}
+
+#whois {
+	padding-bottom: 70px;
+	padding-left: 20px; 
+	padding-right: 20px;
+}
+
+#footer {
+	margin-top: 40px;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	height: 90px;
+	width: 100%;
+	padding-top: 20px;
+    
+}
+
+#mockups img {
+	display:block;
+	width: auto;
+	height: 400px;
+}
+
+#mockups {
+	margin-left: 27%;
+}
+
+.titlep p {
+	font-size: 30px; 
+
+}
+	
+#chatHeader {
+	margin-top: 30px;
+	width: 100%;
+	height:auto;
+	background-color: white;
+	padding:10px;
+}
+
+#chatList {
+	background-color: #F1F1F1;
+	border-radius: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+	height:700px;
+}
+
+#search {
+	background-color: white;
+	margin-top: 20px;
+	margin-left: 20px;
+	width:400px;
+	padding-top: 10px;
+	height:640px;
+}
+
+
+
+.chat1 img{
+	width: 70px;
+	height: 70px;
+}
+
+.chat1 {
+	height: 80px;
+	width: 99%;
+	background-color: #EBEBEB;
+	padding: 5px;
+	border-radius: 4px;
+	text-align: left;
+
+}
+
+#file {
+	background-image: url('https://image.flaticon.com/icons/svg/2235/2235410.svg');
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% ;
+	border: none;
+	width: 30px;
+	height: 10px;
+	padding: 0%;
+	margin: 0%;
+}
+
+#picture {
+	background-image: url('https://image.flaticon.com/icons/svg/1160/1160358.svg');
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% ;
+	border: none;
+	width: 30px;
+	height: 10px;
+	padding: 0%;
+	margin: 0%;
+}
+
+#chatbox div {
+	background-color: #EBEBEB;
+	margin: 5px;
+	margin-left: 670px;
+	border-radius: 10px;
+	text-align: left;
+	padding: 1px;
+	width: 500px;
+	float:center;
+	margin-top: 30px;
+	display: block;
+
+}
+
+#chatbox p{
+	width: auto;
+	max-width: 430px;
+	text-align: left;
+	float:center;
+	padding-left: 10px;
+	word-wrap: break-word;
+	position: relative;
+}
+
+#chatbox h3{
+	position: relative;
+	margin: none;
+	margin-top: -30px;
+	float: right;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+
+
+#typebox {
+	background-color: #ffcd24; 
+	
+	height: 30px;
+	display: flex;
+	padding: 5px;
+	position: absolute;
+	top: 1200px;
+	right: 85px;
+	left: 530px;
+}
+
+#message {
+	
+	position: relative;
+	left: 100px;
+}
+
+#insert {
+	position: relative;
+	left: 105px;
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #EBEBEB;
+	border: solid, 3px;
+	border-radius: 3px;
+}
+
+#profileP {
+	width: 60px;
+	margin: none;
+	position: absolute;
+	margin-bottom: 100px;
+	right: -130px;
+	margin-top: -22px;
+}
+
+#hprofileP {
+	width: 60px;
+	margin: none;
+	position: absolute;
+	margin-bottom: 100px;
+	left: -70px;
+	margin-top: -22px;
+}
+
+#imgur {
+	
+	max-width: 400px;
+	float: right;
+	margin-right: 100px;
+	position: relative;
+}
+
+#hemes1 {
+	margin-right: 670px;
+	
+}
+
