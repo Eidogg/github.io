@@ -8,6 +8,17 @@
      </title>
 	 <link rel="shortcut icon" type="image"
 	 href="https://i.imgur.com/iPAUB7Y.png" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166330163-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166330163-1');
+</script>
+
+	  
   </head>
   <body style="background-color: #FFFFFF;" >
 	<div id="header1">
@@ -24,7 +35,7 @@
 	<div id="prototypediv">	
 	  <table style="width 100%; margin: auto;">
 	   <tr height="1000">
-	    <td style="padding-left: 15%;"> <h1 style="color: white; font-size: 90px;">Try out our prototype!</h1> <br> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down" ><button class="figmabutton"><h1 style="font-size:40px; margin-top: 12;">Click here!</h1></button></a>
+	    <td style="padding-left: 15%;"> <h1 style="color: white; font-size: 90px;">Try out our prototype!</h1> <br> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down" ><button class="figmabutton" onclick="protoA()"><h1 style="font-size:40px; margin-top: 12;">Click here!</h1></button></a>
 		</td>
 		<td> <a href="https://www.figma.com/proto/1TGobHiQoPrsyK6C6MZqtP/Untitled?node-id=1%3A2&scaling=scale-down"><img style="margin-left: 1%; display: block;" src="https://i.imgur.com/ij27aev.png" width="300"/></a>
 		</td>
@@ -84,7 +95,23 @@
 		console.log(score);
 	}
 	
-	
+	function protoA() {
+		gtag(“event”, “Prototype”, {
+   		“event_category”: “Landing”
+ 		});
+	}
+	    
+	function subscrib() {
+		gtag(“event”, “Subscribe”, {
+   		“event_category”: “Landing”
+ 		});
+	}
+	    
+	function subscrib() {
+		gtag(“event”, “Subscribe”, {
+   		“event_category”: “Landing”
+ 		});
+	}
 
 	function night() {
 		
@@ -104,6 +131,10 @@
 			document.getElementById("Mockups").style.color = "black";
 			document.getElementById("moon").src = 'https://i.imgur.com/Ia67RD6.png';
 			dark = 0;
+			gtag(“event”, “Nightmode”, {
+   			“event_category”: “Landing”
+ 		});
+		
 		}
 		
 	}
@@ -200,7 +231,7 @@
 	
 	</div >
 	<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -209,38 +240,15 @@
 <div id="mc_embed_signup">
 <form action="https://github.us18.list-manage.com/subscribe/post?u=865a9d8d318333e8c33da7989&amp;id=379352b3a4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-	<h2>Subscribe</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-LNAME">Last Name </label>
-	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-</div>
-<div class="mc-field-group size1of2">
-	<label for="mce-BIRTHDAY-month">Birthday </label>
-	<div class="datefield">
-		<span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> / 
-		<span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span> 
-		<span class="small-meta nowrap">( mm / dd )</span>
-	</div>
-</div>	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	<label for="mce-EMAIL">Subscribe</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_865a9d8d318333e8c33da7989_379352b3a4" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="subscrib()"></div>
     </div>
 </form>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 <!--End mc_embed_signup-->
 
 	<div id="footer">
