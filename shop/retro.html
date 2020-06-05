@@ -1,0 +1,212 @@
+<!doctype html>
+<head>
+
+    <title>Retro Shop</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="title">
+        <h1>The Retro Shop</h1>
+    </div>
+    <div id="nav"> <a href="retro.html"><h1>Home</h1></a><h1>Contacts</h1> <div id="cart"><p id="amount">0</p> <p>item(s) │ €</p><p id="cartP">0.00</p></div></div>
+    <div id="space">
+
+
+    </div>
+<script>
+
+window.onscroll = function() {scroller()};
+var header = document.getElementById("nav");
+var sticky = header.offsetTop;
+
+function scroller() {
+if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+} else {
+    header.classList.remove("sticky");
+}
+}
+
+
+
+
+
+var items = [
+        {
+            "id": 0,
+            "title": "Hat",
+            "imageURL": "https://i.imgur.com/HgIzJ0O.png",
+            "description": "A retro hat from 1972 wore by Jim Morrison. Size L",
+            "price": 25.99
+        },
+        {
+            "id": 1,
+            "title": "Guitar",
+            "imageURL": "https://i.imgur.com/1pc347r.png",
+            "description": "Used by Jimi Hendrix in Spain tour 1969. Left-handed.",
+            "price": 7560
+        },
+        {
+            "id": 2,
+            "title": "Headset",
+            "imageURL": "https://i.imgur.com/BU1u53U.png",
+            "description": "Mono/Stereo sound.",
+            "price": 129.99
+        },
+        {
+            "id": 3,
+            "title": "Backpack",
+            "imageURL": "https://i.imgur.com/WOGQ3ll.png",
+            "description": "25 liters travel fake-leather",
+            "price": 59.99
+        },
+        {
+            "id": 4,
+            "title": "Glasses",
+            "imageURL": "https://i.imgur.com/KQssRzO.png",
+            "description": "-3.75 left eye -4.25 right eye. Can you buy glasses like this somewhere else? You cannot.",
+            "price": 158.45
+        },
+        {
+            "id": 5,
+            "title": "Camera",
+            "imageURL": "https://i.imgur.com/hifcDsd.png",
+            "description": "Works only with Kodak Pro-289l films",
+            "price": 46.15
+        },
+        {
+            "id": 6,
+            "title": "Skate",
+            "imageURL": "https://i.imgur.com/KiZi7HQ.png",
+            "description": "Tony Hawks first skate.",
+            "price": 2500
+        },
+        {
+            "id": 7,
+            "title": "Shirt",
+            "imageURL": "https://i.imgur.com/4OZIWFV.png",
+            "description": "Wore by Elvis Presley in Acapulco film.",
+            "price": 756
+        },
+        {
+            "id": 8,
+            "title": "Sneakers",
+            "imageURL": "https://i.imgur.com/4GtCkkJ.png",
+            "description": "Used by Bugs Bunny in Space-Jam",
+            "price": 259.30
+        },
+        {
+            "id": 9,
+            "title": "Shoes",
+            "imageURL": "https://i.imgur.com/uRXDvwK.png",
+            "description": "Only one. Right foot.",
+            "price": 79.99
+        },
+        {
+            "id": 10,
+            "title": "Red Hat",
+            "imageURL": "https://i.imgur.com/qvwxXYY.png",
+            "description": "Outlander's costume. Unique piece!",
+            "price": 250
+        },
+        {
+            "id": 11,
+            "title": "Brown Beanie",
+            "imageURL": "https://i.imgur.com/zZAtqkD.png",
+            "description": "Want to be cool but look like idiot? Buy this hat.",
+            "price": 829.15
+        },
+        {
+            "id": 12,
+            "title": "Blue Jeans",
+            "imageURL": "https://i.imgur.com/PMFkkjS.png",
+            "description": "Blue jeans, white shirt. Walked into the room you know you made my eyes burn",
+            "price": 150.90
+        },
+        {
+            "id": 13,
+            "title": "Brown Pants",
+            "imageURL": "https://i.imgur.com/PmCMb4p.png",
+            "description": "They are so ugly that we give them out for almost nothing",
+            "price": 1.99
+        },
+        {
+            "id": 14,
+            "title": "Radio",
+            "imageURL": "https://i.imgur.com/Xd1YRFS.png",
+            "description": "AM only. Volumne knob broken but works at max volume",
+            "price": 5.99
+        }        
+    ];
+    var totalPrice = 0;
+    var divHTML = document.getElementById("space");
+    var itemC = 0;
+    
+
+
+for (var index = 0; index < items.length; index++) {
+    let item = items[index];
+    
+    var box = document.createElement("DIV"); 
+    let pic = document.createElement("img");
+    pic.src = items[index].imageURL;
+    
+
+    box.appendChild(pic);
+    
+    
+    var titleText = document.createElement("h1");
+    titleText.innerHTML = items[index].title;
+    box.appendChild(titleText);   
+
+    var descText = document.createElement("p");
+    descText.innerHTML = items[index].description;
+    box.appendChild(descText);   
+
+    var priceText = document.createElement("p");
+    priceText.innerHTML = "€" + items[index].price;
+    box.appendChild(priceText);   
+
+    var addButton = document.createElement("button");
+    addButton.innerHTML = "Add"; 
+    addButton.classList.add("addbutton");
+    addButton.addEventListener("click", function() {
+        console.log(item.price);
+        totalPrice += item.price;
+        itemC += 1;
+        
+        document.getElementById("cartP").innerHTML = totalPrice.toFixed(2);
+        document.getElementById("amount").innerHTML = itemC;
+        console.log("Total is " + totalPrice.toFixed(2)); 
+    });
+    box.appendChild(addButton);
+
+    var removeButton = document.createElement("button");
+    removeButton.innerHTML = "Remove";
+    removeButton.classList.add("rembutton");
+    removeButton.addEventListener("click", function() {
+        if (totalPrice - item.price >= 0) {
+            totalPrice -= item.price;
+            itemC -= 1;
+            document.getElementById("cartP").innerHTML = totalPrice.toFixed(2);
+            document.getElementById("amount").innerHTML = itemC;
+            console.log("Total is " + totalPrice.toFixed(2));
+        }
+        
+	});
+    box.appendChild(removeButton);
+
+    divHTML.appendChild(box);
+}
+
+
+
+</script>
+  
+</body>
+
+</html>
