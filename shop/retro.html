@@ -1,18 +1,68 @@
 <!doctype html>
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Shop</title>
 
     <link rel="stylesheet" href="styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<style>
+@media only screen and (min-width: 300px) {
+    #space {grid-template-columns: 300px;}
+    #nav h1 {font-size: 25px; margin-right: 10px; margin-left: 30px;}
+    #nav {text-align: left;}
+    #cart p {font-size: 15px;}
+    #cart {min-width: 30%;}
+}
+
+@media only screen and (min-width: 700px) {
+  /* For tablets: */
+  #space {grid-template-columns: 300px 300px;}
+  #nav h1 {font-size: 25px; margin-left: 30px;}
+  #cart {min-width: 30%;}
+}
+
+
+
+@media only screen and (min-width: 968px) {
+  /* For desktop: */
+  #space {grid-template-columns: 300px 300px 300px;}
+  #nav h1 {font-size: 30px; margin-right: 50px; margin-left: 50px;}
+  #nav {text-align: center;}
+  #cart p {font-size: 20px;}
+  #cart {min-width: 20%;}
+
+}
+
+@media only screen and (min-width: 1250px) {
+  /* For desktop: */
+  #space {grid-template-columns: 300px 300px 300px 300px;}
+  #nav h1 {font-size: 30px; margin-right: 50px; margin-left: 50px;}
+  #nav {text-align: center;}
+  #cart p {font-size: 20px;}
+  #cart {min-width: 15%;}
+}
+</style>
+
 </head>
 
 <body>
     <div id="title">
         <h1>The Retro Shop</h1>
     </div>
-    <div id="nav"> <a href="retro.html"><h1>Home</h1></a><h1>Contacts</h1> <div id="cart"><p id="amount">0</p> <p>item(s) │ €</p><p id="cartP">0.00</p></div></div>
+    <div id="nav"> <a href="retro.html"><h1 class="navtext">Home</h1></a><h1>Contacts</h1> <div id="cart"><p id="amount">0</p> <p>item(s) │ €</p><p id="cartP">0.00</p></div></div>
+    <div id="search"> 
+        <input placeholder="Search..." id="inp-box" type="text" list="suggestions">
+        <datalist id="suggestions">
+            <option value="Hat">
+            <option value="Guitar">
+            <option value="Headset">
+
+        </datalist>
+        <button id="sbut" onclick="searchWord()">Search</button>
+    </div>
+    <div id="foundD"></div>
     <div id="space">
 
 
@@ -204,6 +254,94 @@ for (var index = 0; index < items.length; index++) {
 }
 
 
+
+function searchWord() {
+    input = document.getElementById("inp-box").value;
+    console.log(input);
+    
+    if (input.length == 0) {
+        console.log("nothing");
+    }
+    else {
+        divHTML.innerHTML = '';
+        console.log("something");
+        var foundText = document.createElement("h1");
+        
+        document.getElementById("foundD").innerHTML = '';
+        var results = 0;
+        
+        for (var index = 0; index < items.length; index++) {
+            let item = items[index];
+            linput = input.toLowerCase();
+            ltitle = items[index].title.toLocaleLowerCase();
+            if (linput == ltitle) {
+                console.log("YEEES");
+            
+                var box = document.createElement("DIV"); 
+                let pic = document.createElement("img");
+                pic.src = items[index].imageURL;
+    
+
+                box.appendChild(pic);
+    
+    
+                var titleText = document.createElement("h1");
+                titleText.innerHTML = items[index].title;
+                box.appendChild(titleText);   
+
+                var descText = document.createElement("p");
+                descText.innerHTML = items[index].description;
+                box.appendChild(descText);   
+
+                var priceText = document.createElement("p");
+                priceText.innerHTML = "€" + items[index].price;
+                box.appendChild(priceText);   
+
+                var addButton = document.createElement("button");
+                addButton.innerHTML = "Add"; 
+                addButton.classList.add("addbutton");
+                addButton.addEventListener("click", function() {
+                    console.log(item.price);
+                    totalPrice += item.price;
+                    itemC += 1;
+        
+                    document.getElementById("cartP").innerHTML = totalPrice.toFixed(2);
+                    document.getElementById("amount").innerHTML = itemC;
+                    console.log("Total is " + totalPrice.toFixed(2)); 
+                });
+                box.appendChild(addButton);
+
+                var removeButton = document.createElement("button");
+                removeButton.innerHTML = "Remove";
+                removeButton.classList.add("rembutton");
+                removeButton.addEventListener("click", function() {
+                    if (totalPrice - item.price >= 0) {
+                        totalPrice -= item.price;
+                        itemC -= 1;
+                        document.getElementById("cartP").innerHTML = totalPrice.toFixed(2);
+                        document.getElementById("amount").innerHTML = itemC;
+                        console.log("Total is " + totalPrice.toFixed(2));
+                    }
+        
+	            });
+                box.appendChild(removeButton);
+
+                divHTML.appendChild(box);
+                results += 1;
+            }
+            if (results == 0) {
+                foundText.innerHTML = "Found no results";
+            }
+            else {
+                foundText.innerHTML = "Found " + results + " items";
+
+            }
+            document.getElementById("foundD").appendChild(foundText);
+        }
+
+    }
+			
+}	
 
 </script>
   

@@ -114,7 +114,7 @@ a:link {
     right: 0px;
     padding-top: 10px;
     transition: 0.3s;
-
+    text-align: center;
 }
 
 #cart p{
@@ -123,4 +123,30 @@ a:link {
     padding-top: 10px;
 }
 
+#inp-box {
+    width: 30%;
+    padding-left: 5px;
+    margin-top: 30px;
+    height: 28px;
+    display: block;
+    margin-left: 30%;
+}
 
+#search {
+    display: flex;
+    flex-direction: row;
+}
+#sbut {
+    height: 35px;
+    margin-top: 30px;
+    padding-left: 5px;
+    background-color: black;
+    border: 1px;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#foundD {
+    text-align: center;
+}
