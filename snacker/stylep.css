@@ -1,0 +1,358 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, p {
+		font-family: 'Josefin Sans', sans-serif;
+		text-align:center;
+		
+	  }
+	  
+.title {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:70;
+}
+
+.rtable img {
+	display: block;
+	margin: auto;
+	width: 70%;
+	height: auto;
+}
+
+.content {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:30;
+}
+
+
+
+.tableborder2 {
+	border-style: none;
+}
+
+.foodtable {
+  border-collapse: collapse;
+  background-color: #FFE17A;
+  padding: 10px;
+  border-radius: 13px;
+  border: solid;
+  
+}
+
+.rname {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:30;
+}
+
+.ftype {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+    font-size:50;
+}
+
+.ftype img {
+	width: 20%;
+}
+
+.foodimg img{
+	width: 20px;
+    
+}
+	
+.rimg {
+	display: block;
+	margin: auto;
+	width: 70%;
+	height: 150;
+}
+
+.figmabutton {
+	background-image: linear-gradient(to left, #ffdd57, #ffaa00);
+	width: 270px;
+	height: 70px;
+	margin-left: 30%;
+	border-radius: 10px;
+	border-color: black;
+	cursor: pointer;
+	box-shadow: 30 9px #999;
+}
+
+.figmabutton:hover {background-image: linear-gradient(to left, #edce53, #e39700);}
+
+.figmabutton:active {
+	background-image: linear-gradient(to left, #edce53, #e39700);
+	
+	transform: translateY(4px);
+}
+
+.slogan {
+	font-family: 'Josefin Sans', sans-serif; 
+	text-align:center; 
+	font-size:50; 
+	color: white;
+	padding-bottom: 20px;
+	margin-left: 5%;
+}
+
+.underline1 {
+	width: 500px; 
+	height: 10px; 
+	background-color: #ffcd24; 
+	margin-left: 40%;
+	border-radius: 3px;
+
+}
+
+#header1 {
+	background-image: url('https://c.pxhere.com/photos/99/f6/background_food_tasty_olives_wooden_background_cooking_plate_kitchen-1369813.jpg!d');
+	background-repeat: no-repeat;
+    background-size: 100% ;
+	padding: none;
+	width: 100%;
+    margin-top: -10px;
+	padding-top: 1px;
+	position: relative;
+	height: auto;
+	
+}
+
+/*#header1::after {
+	position: absolute;
+	opacity: 0.1;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	content: ;
+	top: 0;
+	bottom: 0;
+}*/
+
+
+
+#content {
+  margin-top: 100px;	
+}
+
+#prototypediv {
+	background-image: url('https://wallpaperaccess.com/full/462860.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	
+}
+
+.rtable {
+	margin: auto; 
+	width: 50%;
+
+}
+	
+#customerapp td{
+	height: 500px;
+	width: 40%;
+	margin:auto;
+}
+
+#customerapp {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	height: 500px;
+}
+
+#navigation {
+	background-color: black;
+	height: 50px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	padding-top: 1px;
+	
+	width:100%
+}
+
+#navigation a {
+	text-decoration: none;
+	color: white;
+	padding-left: 120px;
+}
+
+#whois {
+	padding-bottom: 70px;
+	padding-left: 20px; 
+	padding-right: 20px;
+}
+
+#footer {
+	margin-top: 40px;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	height: 90px;
+	width: 100%;
+	padding-top: 20px;
+    
+}
+
+#mockups img {
+	display:block;
+	width: auto;
+	height: 400px;
+}
+
+#mockups {
+	width: 100%;
+	display: flex; /* or inline-flex */
+	flex-direction: row;
+	justify-content: center;
+	display: flex;
+	
+}
+
+#mockups td{
+	padding: 50px;
+}
+
+#mockups img{
+	width: 250px;
+	height: auto;
+}
+
+.titlep p {
+	font-size: 30px; 
+
+}
+	
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%
+}
+
+iframe {
+	margin: 20px;
+	margin-left: 100px;
+	width: 800px;
+	height: 650px;
+}
+
+#inp-box {
+	padding: 10px;
+	width: 350px;	
+}
+
+#map {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.input-field {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+}
+
+#menubut {
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+	border-radius: 2px;
+	border: none;
+	padding: 2px;
+	padding-bottom: 5px;
+	font-family: 'Josefin Sans', sans-serif;
+	cursor: pointer;
+
+}
+
+#menubut:hover {background-color: #d1d1d1}
+
+#menuList {
+	display: none;
+	z-index: 1;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	right: 10px;
+	height: 100%;
+	top: 0;
+
+}
+
+#menuPage {
+	background-color: white;
+	z-index: 1;
+	position: fixed;
+	overflow: auto;
+	width: 40%;'
+	height: 90%;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border-radius: 5px;
+}
+
+.menuItems {
+
+}
+
+#caution {
+	background-color: #ff5d30;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	color: white;
+	width: 60%;'
+	font-size: 70px;
+	padding: 5px;
+	border-radius: 5px;
+	display: flex;
+	padding-left: 10px;
+	text-align: left;
+}
+
+#menuPage img {
+	padding: 5px;
+}
+
+#menuPage tr {
+	display: flex;
+	width: 700px;
+	justify-content: space-evenly;
+	text-align: left;
+}
+
+#menuPage td {
+	display: flex;
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	flex-direction: column;
+}
+
+#menuPage p {
+	font-size: 25px;
+	text-align: left;
+}
+
+#menuPage h2 {
+	font-size: 28px;
+}
+
+#About {
+	text-align: left;
+}
+
+#About p{
+	font-size: 30px;
+}
+
+#About h1{
+	font-size: 40px;
+}
