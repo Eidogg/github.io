@@ -100,7 +100,7 @@ h1, h2, p {
 }
 
 .underline1 {
-	width: 500px; 
+	width: 30%; 
 	height: 10px; 
 	background-color: #ffcd24; 
 	margin-left: 40%;
@@ -217,8 +217,9 @@ h1, h2, p {
 }
 
 #mockups img{
-	width: 250px;
+	width: 100%;
 	height: auto;
+	display: block;
 }
 
 .titlep p {
@@ -291,7 +292,7 @@ iframe {
 	z-index: 1;
 	position: fixed;
 	overflow: auto;
-	width: 40%;'
+	width: 40%;
 	height: 90%;
 	right: 0;
 	bottom: 0;
@@ -308,7 +309,7 @@ iframe {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	color: white;
-	width: 60%;'
+	width: 60%;
 	font-size: 70px;
 	padding: 5px;
 	border-radius: 5px;
@@ -355,4 +356,248 @@ iframe {
 
 #About h1{
 	font-size: 40px;
+}
+
+#header1 h1{
+	font-size: 120;
+}
+
+#prototypediv img{
+	width: 300;
+}
+
+
+
+.t1 {
+	width: 200;
+	display: block;
+}
+
+.t2 {
+	width: 250;
+}
+
+.tdp {
+	padding: 100px; 
+	padding-bottom: 20px;
+}
+
+#logo {
+	width: 130;
+}
+
+.protob {
+	height: 1000;
+}
+
+#mc_embed_signup {
+	margin-left: 40%;
+}
+@media screen and (min-width: 300px) {
+	#header1 h1{
+		font-size: 50;
+	}
+	#prototypediv img{
+		width: 150;
+	}
+	.protoh1 {
+		font-size: 50px;
+		margin-left: 40px;
+	}
+	.figmabutton h1{
+		font-size: 25px;
+	}
+	.tdp {
+		padding: 20px;
+	}
+	.t1 {
+		width: 120;
+	}
+	.t2 {
+		width: 150;
+	}
+	.title {
+		font-size: 35;
+	}
+	#logo {
+		width: 80;
+	}
+	.slogan {
+		font-size: 30;
+	}
+	.protob {
+		height: 200;
+	}
+	#mockups img {
+		width: 100px;
+	}
+	#mockups td{
+		padding: 10px;
+	}
+	.title p{
+		font-size: 20px;
+	}
+	#mc_embed_signup {
+		margin-left: 10%;
+	}
+	.figmabutton {
+		width: 170px;
+	}
+}
+
+@media screen and (min-width: 550px) {
+	#header1 h1{
+		font-size: 70;
+	}
+	.protoh1 {
+		font-size: 50px;
+		margin-left: 70px;
+	}
+	#prototypediv img{
+		width: 150;
+	}
+	.figmabutton h1{
+		font-size: 30px;
+	}
+	.tdp {
+		padding: 20px;
+	}
+	.t1 {
+		width: 140;
+	}
+	.t2 {
+		width: 170;
+	}
+	.title {
+		font-size: 35;
+	}
+	#logo {
+		width: 80;
+	}
+	.slogan {
+		font-size: 35;
+	}
+	.protob {
+		height: 300;
+	}
+	#mockups img {
+		width: 150px;
+	}
+	#mockups td{
+		padding: 20px;
+	}
+	.title p{
+		font-size: 25px;
+	}
+	#mc_embed_signup {
+		margin-left: 20%;
+	}
+	.figmabutton {
+		width: 190px;
+	}
+} 
+
+@media screen and (min-width: 900px) {
+	#header1 h1{
+		font-size: 70;
+	}
+	.protoh1 {
+		font-size: 50px;
+		margin-left: 100px;
+	}
+	#prototypediv img{
+		width: 200;
+	}
+	.figmabutton h1{
+		font-size: 35px;
+	}
+	.tdp {
+		padding: 50px;
+	}
+	.t1 {
+		width: 170;
+	}
+	.t2 {
+		width: 200;
+	}
+	#logo {
+		width: 100;
+	}
+	.title {
+		font-size: 55;
+	}
+	.slogan {
+		font-size: 40;
+	}
+	.protob {
+		height: 500;
+	}
+	#mockups img {
+		width: 100%;
+	}
+	#mockups td{
+		padding: 50px;
+	}
+	.title p{
+		font-size: 30px;
+	}
+	#mc_embed_signup {
+		margin-left: 30%;
+	}
+	.figmabutton {
+		width: 220px;
+	}
+} 
+
+@media screen and (min-width: 1280px) {
+	#header1 h1{
+		font-size: 120;
+	}
+	.protoh1 {
+		font-size: 90px;
+		margin-left: 150px;
+	}
+	#prototypediv img{
+		width: 300;
+		padding-left: 100px;
+	}
+	.figmabutton h1{
+		font-size: 40px;
+	}
+	.tdp {
+		padding: 100px;
+	}
+	.t1 {
+		width: 200;
+	}
+	.t2 {
+		width: 250;
+	}
+	#logo {
+		width: 130;
+	}
+	.title {
+		font-size: 70;
+	}
+	.slogan {
+		font-size: 50;
+	}
+	.protob {
+		height: 1000;
+	}
+	#mockups img {
+		width: 100%;
+	}
+	#mockups td{
+		padding: 50px;
+	}
+	.title p{
+		font-size: 30px;
+	}
+	#mc_embed_signup {
+		margin-left: 40%;
+	}
+	.figmabutton {
+		width: 270px;
+	}
 }
