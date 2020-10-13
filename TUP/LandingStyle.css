@@ -99,11 +99,12 @@ p {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   margin-top: 100px;
   margin-bottom: 100px;
+  
 }
 
 #footer{
