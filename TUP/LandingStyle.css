@@ -1,0 +1,113 @@
+body {
+  background-color: #0a141c;
+  padding: none;
+  margin: 0px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+.trapezoid {
+    width: 700px;
+    height: 600px;
+    transform: skew(20deg);
+    background: #284359;
+    position: absolute;
+    top: 0;
+    z-index:-1;
+}
+
+#title {
+  width: 700px;
+  height: 520px;
+  padding: 2%;
+  padding-left: 4%;
+
+}
+
+.glow {
+  color: #ffe138;
+  font-family: 'Black Ops One', cursive;
+  font-size: 70px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #363534, 0 0 1px #363534, 0 0 2px #363534, 0 0 2px #363534, 0 0 3px #ffc400, 0 0 4px #ffc400, 0 0 5px #ffc400;
+  }
+  
+  to {
+    text-shadow: 0 0 5px #363534, 0 0 5px #ffc400, 0 0 8px #ffc400, 0 0 12px #ffc400, 0 0 13px #ffc400, 0 0 14px #ffc400, 0 0 30px #ffc400;
+  }
+}
+
+.backin {
+  background-image: url("https://i.imgur.com/O0P26MS.jpg");
+  position: absolute;
+  top: 0;
+  z-index:-2;
+  width: 90%;
+  height: 600px;
+  margin-left: 10%;
+}
+
+.menu {
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  padding-left: 120px;
+}
+
+.menubut {
+  padding-top: 10px;
+  color:#c2c2c2;
+  height: 100%;
+  width: 40px;
+  font-size: 15px;
+}
+
+.menubut h1{
+  margin-block-start: 0.0em;
+  margin-block-end: 0em;
+  font-family: 'Open Sans', sans-serif;
+
+
+
+}
+
+.desc {
+  color: #c2c2c2;
+  padding-left: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.video {
+  position: relative;
+  top: 10%;
+  right: 30%;
+  z-index:2;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#footer{
+  width: 100%;
+  background-color: black;
+  height: 100px;
+}
