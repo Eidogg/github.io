@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
+	<meta name="description" content="Make your practice easier!" />
+	<meta charset="utf-8">
+	<title>Vibrify</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<link rel="shortcut icon" type="image" href="https://i.imgur.com/rtK2pFl.png" />
+</head>
+
+<body>
+
+	<div id="app">
+		<div id="app2">
+			<div id="screen-authentication">
+				<div class="topmenu1">
+					<img src="https://i.imgur.com/6bSAA9n.png" alt="">
+				</div>
+				<p id="logintext">Log in to save your data and access your app from other devices!</p>
+				<input id="email" autocomplete="off" placeholder="Email">
+				<input id="password" type="password" placeholder="Password">
+				<button onclick="signup();" id="loginB">Sign up</button>
+				<button onclick="login();" id="signupB">Log In</button>
+				<a href="#" onclick="logout();" style="color: #6E2FA5; font-size: 1.5em;">Log out</a>
+				<p id="feedback"></p>
+			</div>
+		</div>
+
+		<div id="screen-chat" style="width: 100%;">
+
+			<div id="chat-layout" style="width: 100%;">
+				<div id="header" style="width: 100%;">
+
+					<div class="topmenu">
+						<img src="https://i.imgur.com/6bSAA9n.png" alt="">
+						<a href="#" onclick="logout();" class="logoutb">Log out</a>
+					</div>
+
+					<div id="content">
+
+						<div id="lists-div">
+							<h1>My lists</h1>
+							<div style="width: 100%; height: 0.6em; border-radius: 3px; background-color: #1D2562;"></div>
+							<div id="lists">
+								<!-- <div class="listcontainer">
+								<div>
+									<h2>13 <br> Songs</h2>
+									<h1>SETLIST <br>
+										<p>Metallica, Rage Against The Machine, The Strokes, Muse, </p>
+									</h1>
+								</div>
+							</div>	 -->
+							</div>
+
+							<div id="footer">
+								<button onclick="showAddScreen()" class="addB" id="addB">Add</button>
+								<div id="listinp">
+									<button onclick="addBtn()" class="addB">Add</button><input id="list-input" autocomplete="off"
+										placeholder="List name..." />
+								</div>
+							</div>
+							
+						</div>
+
+						<div id="lists-div-2">
+							<!--<h1>PLAYLIST NAME</h1>-->
+							<button onclick="closeList()" id="exitB">X</button>
+							<div style="width: 100%; height: 0.6em; border-radius: 3px; background-color: #1D2562;"></div>
+							<div id="songcontainer">
+								<!-- <div>
+									<img src="https://i.imgur.com/K0ecVvD.png" alt="">
+									<h1>I<br>
+										<p>Insuldid</p>
+									</h1>
+								</div> -->
+							</div>
+
+							<div id="footer2">
+								<button onclick="showSongAddScreen()" class="addB" id="addB2">Add</button>
+								<div id="songinp">
+									<input id="name-input" autocomplete="off" placeholder="Name" />
+									<input id="artist-input" autocomplete="off" placeholder="Artist" />
+
+									<select id="instrument" name="instruments">
+										<option value="guitar">Acoustic Guitar</option>
+										<option value="guitarE">Electric Guitar</option>
+										<option value="piano">Piano</option>
+										<option value="bass">Bass</option>
+										<option value="violin">Violin</option>
+										<option value="sax">Saxofone</option>
+										<option value="drums">Drums</option>
+										<option value="voice">Voice</option>
+										<option value="flute">Flute</option>
+										<option value="other">Other</option>
+									</select>
+									<input id="genre-input" autocomplete="off" placeholder="Genre" />
+									<input id="tempo-input" autocomplete="off" placeholder="Tempo" />
+									<button onclick="addSong(); addSongToList();" class="addB">Add</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>

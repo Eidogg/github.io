@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 14px;
+  background-color: #121833;
+}
+
+#feedback {
+  color: red;
+  align-self: center;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.topmenu {
+    width: 100%;
+    height: 12em;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.topmenu img {
+    /*height: 100px;
+    width: auto;*/
+    padding-left: 5%;
+    flex-shrink: 3;
+    flex-basis: content;
+}
+.topmenu1 {
+  width: auto;
+  height: 8em;
+  padding: 2%;
+  margin: 6em;
+  margin-left: -1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-repeat: no-repeat, repeat;
+}
+#app2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 480px;
+  margin: auto;
+  background-repeat: no-repeat, repeat;
+}
+
+#screen-authentication {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+#screen-authentication button {
+  align-self: center;
+}
+
+#screen-authentication a {
+  align-self: center;  
+  color: var(--alt-color);
+}
+
+#screen-chat {
+  display: none;
+  height: 100%;
+}
+
+#chat-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 3em;
+  border: 3px solid #1D2562;
+  
+  border-radius: 0.7em;
+  background: #121833;
+  color: white;
+  padding-bottom: 0.25em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  font-size: 1.2em;
+}
+
+#logintext {
+  font-family: 'Roboto', sans-serif;
+  color: gray;
+  font-size: large;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+#loginB {
+  margin-top: 2em;
+  background-color: #1D2562;
+  border-radius: 0.5em;
+  color: white;
+  height: 2em;
+  font-size: 2em;
+  margin: 0.3em;
+  width: 6em;
+}
+
+#signupB {
+  margin-top: 2em;
+  background-color: #382162;
+  border-radius: 0.5em;
+  color: white;
+  height: 2em;
+  font-size: 1.5em;
+  width: 4em;
+  margin: 0.3em;
+}
+
+#lists-div {
+  color: white;
+  padding: 2em;
+  max-width: 100em;
+  margin: auto;
+}
+
+#lists {
+  color: white;
+  padding: 2em;
+  max-width: 100em;
+  margin: auto;
+}
+
+.listcontainer div {
+  width: 100%;
+  background-color: #1D2562;
+  height: 8em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px;
+  border-radius: 1em;
+}
+
+.listcontainer div:hover {
+  background-color: #101436;
+}
+
+.listcontainer div h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.listcontainer div h1 {
+  text-align: left;
+  margin-left: 1.5em;
+}
+
+.listcontainer p {
+  color: gray;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+}
+
+#listinp {
+  display: none;
+}
+
+.addB {
+  background-color: #382162;
+  border-radius: 0.5em;
+  color: white;
+  height: 2.5em;
+  font-size: 1.5em;
+  width: 4em;
+	margin-left: 30px;
+}
+
+#footer {
+  margin-top: 2em;
+  display: flex;
+  height: 3em;
+}
+
+#list-input {
+  border-left: 0em;
+  border-top-left-radius: 0em;
+  border-bottom-left-radius: 0em;
+  width: 30em;
+  padding-left: 1em;
+}
+
+#lists-div-2 {
+  color: white;
+  padding: 2em;
+  max-width: 100em;
+  margin: auto;
+	display: none;
+}
+
+select {
+  background-color: #121833;
+  border-radius: 0.7em;
+  color: white;
+  font-size: 1.2em;
+  border: 3px solid #1D2562;
+  height: 3em;
+}
+
+#songcontainer div {
+  width: 100%;
+  background-color: #1D2562;
+  height: 8em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px;
+  border-radius: 1em;
+}
+
+#songcontainer div:hover {
+  background-color: #101436;
+}
+
+#songcontainer div h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+#songcontainer div h1 {
+  text-align: left;
+  margin-left: 1.5em;
+}
+
+#songcontainer p {
+  color: gray;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+}
+
+#songinp {
+  display: none;
+  margin-top: 2em;
+}
+
+#songs {
+  color: white;
+  padding: 2em;
+  max-width: 100em;
+  margin: auto;
+}
+
+#exitB {
+  width: 2em;
+  margin: 1em;
+  background-color: red;
+  color: white;
+  border-radius: 0.2em;
+}
